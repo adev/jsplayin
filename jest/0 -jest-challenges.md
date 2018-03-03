@@ -39,8 +39,8 @@ Use all the following matchers:
 
 **Strings**
 
-8 - remove vowels (.not)
-9 - adds 'bananas' to any string passed.
+~~8 - remove vowels (.not)~~
+~~9 - adds 'bananas' to any string passed.~~
 
 **arrays**
 
