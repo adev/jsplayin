@@ -35,7 +35,7 @@ Use all the following matchers:
 **Numbers**
 
 ~~6 - returns a number between 12 and 20~~
-7 - floating point addition
+~~7 - floating point addition~~
 
 **Strings**
 
