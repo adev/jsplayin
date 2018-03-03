@@ -44,8 +44,8 @@ Use all the following matchers:
 
 **arrays**
 
-10 - return an array of words in a sentence
+~~10 - return an array of words in a sentence~~
 
 **errors**
 
-11 - throw and error if an argument is a string, not a number
+~~11 - throw and error if the argument is 'bananas'~~
