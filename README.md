@@ -2,11 +2,13 @@
 
 just messing around, learning javascript and other related stuff as a periodic distraction :)
 
+## Lets test with Jest
+
+https://facebook.github.io/jest/docs/en/getting-started.html
+
 ## Git Commit Messages
 
-**The seven rules of a great Git commit message**
-
-Thanks to: https://chris.beams.io/posts/git-commit/
+The seven rules of a great Git commit message. Thanks to: https://chris.beams.io/posts/git-commit/
 
 1. Separate subject from body with a blank line
 2. Limit the subject line to 50 characters
