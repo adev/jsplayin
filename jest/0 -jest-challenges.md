@@ -9,7 +9,8 @@ https://facebook.github.io/jest/docs/en/using-matchers.html
 
 **Use ```toBe()``` to test exact values**
 
-1 - Subtraction  
+~~1 - Subtraction~~
+ 
 2 - Hello <name>
 
 **Use ```toEqual()``` to check the value of an object**
