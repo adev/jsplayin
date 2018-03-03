@@ -23,7 +23,7 @@ https://facebook.github.io/jest/docs/en/using-matchers.html
 
 **Testing for Truthiness**
 
-5 - returns null for 0, "lucky" for 1-9, undefined for 10-19
+~~5 - returns null for 0, "lucky" for 1-9, undefined for 10-19~~
 
 Use all the following matchers:
 * toBeNull matches only null
@@ -34,7 +34,7 @@ Use all the following matchers:
 
 **Numbers**
 
-6 - returns a number between 10 and 20
+~~6 - returns a number between 12 and 20~~
 7 - floating point addition
 
 **Strings**
