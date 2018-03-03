@@ -10,16 +10,16 @@ https://facebook.github.io/jest/docs/en/using-matchers.html
 **Use ```toBe()``` to test exact values**
 
 ~~1 - Subtraction~~
- 
-2 - Hello <name>
+
+~~2 - Hello <name>~~
 
 **Use ```toEqual()``` to check the value of an object**
 
-3 - {first:<first>, second: <second>}
+~~3 - {first:<first>, second: <second>}~~
 
 **Use ```not``` to test for the opposite of a matcher**
 
-4 - return a number not equal to the number passed
+~~4 - return a number not equal to the number passed~~
 
 **Testing for Truthiness**
 
