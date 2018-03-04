@@ -1,9 +1,13 @@
 module.exports = {
     lengthOfName, limitToFive,
     getFirst, nthChar, getLast, getMiddle,
-    firstCharCode, chooseCharCode, listCharcodes, oneChar
+    firstCharCode, chooseCharCode, listCharcodes, oneChar,
+    contains
 }
 
+function contains(find, intext){
+    return intext.includes(find);
+}
 function oneChar(text, index){
     return text.charCodeAt(index);
 }

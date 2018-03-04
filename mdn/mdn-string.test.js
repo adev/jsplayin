@@ -49,8 +49,16 @@ describe('String.prototype.charCodeAt()',() => {
     test('single charcode for single character', () => {
         expect(mdnstring.oneChar('A')).toBe(65);
     });
+});
 
-
+describe('String.prototype.includes()',()=>{
+    let text = 'the quick brown fox jumps over the lazy dog.'
+    test('true if matches case', () => {
+        expect(mdnstring.contains('fox', text)).toBe(true);
+    });
+    test('false if doesnt match case', () => {
+        expect(mdnstring.contains('Fox', text)).toBe(false)
+    });
 });
 
 //test('', () => { false });
