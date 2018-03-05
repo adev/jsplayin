@@ -61,4 +61,22 @@ describe('String.prototype.includes()',()=>{
     });
 });
 
+describe('String.prototype.endsWith()', () => {
+    let text = 'the quick brown fox jumps over the lazy dog';
+    let fox = 'brown fox';
+    let dog = 'lazy dog'
+    test('ends with lazy dog by default', () => {
+        expect(mdnstring.checkEnd(dog, text)).toBe(true);
+    });
+    test('doesnt end with brown fox by default', () => {
+        expect(mdnstring.checkEnd(fox, text)).toBe(false);
+    });
+    test('doesnt end with lazy dog if a length of 19 ', () => {
+        expect(mdnstring.checkEnd(dog, text, 19)).toBe(false);
+    });
+    test('does end with brown fox if a length of 19', () => {
+        expect(mdnstring.checkEnd(fox, text, 19)).toBe(true);
+    });
+});
+
 //test('', () => { false });

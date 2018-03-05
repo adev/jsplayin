@@ -2,7 +2,12 @@ module.exports = {
     lengthOfName, limitToFive,
     getFirst, nthChar, getLast, getMiddle,
     firstCharCode, chooseCharCode, listCharcodes, oneChar,
-    contains
+    contains, checkEnd
+}
+
+function checkEnd(find, intext, lengthToSearch){
+    lengthToSearch = ( lengthToSearch ? lengthToSearch : intext.length);
+    return intext.endsWith(find, lengthToSearch);
 }
 
 function contains(find, intext){
