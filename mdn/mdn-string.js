@@ -2,7 +2,12 @@ module.exports = {
     lengthOfName, limitToFive,
     getFirst, nthChar, getLast, getMiddle,
     firstCharCode, chooseCharCode, listCharcodes, oneChar,
-    contains, checkEnd
+    contains, checkEnd, findPosition
+}
+
+function findPosition( find, instring, startingIndex = 0){
+    result = instring.indexOf(find, startingIndex);
+    return (result === -1 ? false : result);
 }
 
 function checkEnd(find, intext, lengthToSearch){

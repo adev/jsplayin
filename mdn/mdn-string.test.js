@@ -79,4 +79,21 @@ describe('String.prototype.endsWith()', () => {
     });
 });
 
+describe('String.prototype.indexOf()',() => {
+    let text = 'the quick brown fox jumps over the lazy dog';
+    test('find position of fox',()=>{
+        expect(mdnstring.findPosition('fox', text)).toBe(16);
+    });
+    test('find position of the first the',()=>{
+        expect(mdnstring.findPosition('the', text)).toBe(0);
+    });
+    test('finds the position of the second the',()=>{
+        expect(mdnstring.findPosition('the', text, 3)).toBe(31);
+    });
+    test('fails to find DOG', () => {
+        expect(mdnstring.findPosition('DOG', text)).toBe(false);
+    });
+
+});
+
 //test('', () => { false });
