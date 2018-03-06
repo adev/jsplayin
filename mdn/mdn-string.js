@@ -2,11 +2,16 @@ module.exports = {
     lengthOfName, limitToFive,
     getFirst, nthChar, getLast, getMiddle,
     firstCharCode, chooseCharCode, listCharcodes, oneChar,
-    contains, checkEnd, findPosition
+    contains, checkEnd, findPosition, lastIndexOf
+}
+
+function lastIndexOf(text, find, fromIndex = text.length){
+    let result = text.lastIndexOf(find, fromIndex);
+    return ( result === -1 ? false : result );
 }
 
 function findPosition( find, instring, startingIndex = 0){
-    result = instring.indexOf(find, startingIndex);
+    let result = instring.indexOf(find, startingIndex);
     return (result === -1 ? false : result);
 }
 

@@ -1,4 +1,5 @@
 const mdnstring = require('./mdn-string');
+let text = 'the quick brown fox jumps over the lazy dog';
 
 describe('string.length property', () => {
     test('Tells you how many characters are in your name', () => {
@@ -52,7 +53,6 @@ describe('String.prototype.charCodeAt()',() => {
 });
 
 describe('String.prototype.includes()',()=>{
-    let text = 'the quick brown fox jumps over the lazy dog.'
     test('true if matches case', () => {
         expect(mdnstring.contains('fox', text)).toBe(true);
     });
@@ -62,7 +62,6 @@ describe('String.prototype.includes()',()=>{
 });
 
 describe('String.prototype.endsWith()', () => {
-    let text = 'the quick brown fox jumps over the lazy dog';
     let fox = 'brown fox';
     let dog = 'lazy dog'
     test('ends with lazy dog by default', () => {
@@ -80,7 +79,6 @@ describe('String.prototype.endsWith()', () => {
 });
 
 describe('String.prototype.indexOf()',() => {
-    let text = 'the quick brown fox jumps over the lazy dog';
     test('find position of fox',()=>{
         expect(mdnstring.findPosition('fox', text)).toBe(16);
     });
@@ -93,7 +91,20 @@ describe('String.prototype.indexOf()',() => {
     test('fails to find DOG', () => {
         expect(mdnstring.findPosition('DOG', text)).toBe(false);
     });
+});
 
+describe('String.prototype.lastIndexOf()',()=>{
+    //returns the last occurrence of a string within anothe string
+    // optional fromIndex counts backwards from the end of the string
+    test('find the position of the second the',()=>{
+        expect(mdnstring.lastIndexOf(text, 'the')).toBe(31)
+    });
+    test('find the position of the first the (searching the first half of the text)',()=>{
+        expect(mdnstring.lastIndexOf(text, 'the', 21)).toBe(0)
+    });
+    test('case sensitive - dont find THE',()=>{
+        expect(mdnstring.lastIndexOf(text, 'THE', 20)).toBe(false)
+    });
 });
 
 //test('', () => { false });
