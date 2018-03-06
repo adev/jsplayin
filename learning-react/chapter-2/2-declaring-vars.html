@@ -1,0 +1,30 @@
+<html>
+<head>
+
+<head>
+<body>
+    <div id="container">
+        this is the container
+    </div>
+
+    <script>
+    var div,
+        container = document.getElementById('container')
+
+//change the alert box output
+// by changing the decalaration of i in the
+// loop to use var or let
+
+        for (let i=0; i<5;i++) {
+            div = document.createElement('div')
+            var content = document.createTextNode('new div ' + i + ' content - click here')
+            div.appendChild(content)
+            document.body.insertBefore(div, container)
+
+            div.onclick = function(){
+                alert('this is box #' + i)
+            }
+        }
+    </script>
+</body>
+</html>
