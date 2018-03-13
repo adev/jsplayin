@@ -1,3 +1,3 @@
-export const thing1 = 'thing1'
-export const thing2 = 'thing2'
-export const thing3 = 'thing3'
+module.exports.thing1 = 'thing1'
+module.exports.thing2 = 'thing2'
+module.exports.thing3 = 'thing3'
