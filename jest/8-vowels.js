@@ -1,5 +1,5 @@
-module.exports = remvowels;
+module.exports = remvowels
 
-function remvowels(text){
-    return text.replace(/[aeiou]/g,'')
+function remvowels (text) {
+  return text.replace(/[aeiou]/g, '')
 }

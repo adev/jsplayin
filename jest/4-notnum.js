@@ -1,5 +1,5 @@
-module.exports = notnum;
+module.exports = notnum
 
-function notnum(num){
-    return num + 1;
+function notnum (num) {
+  return num + 1
 }

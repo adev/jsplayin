@@ -1,8 +1,8 @@
 const youPromised = thing => {
-    return new Promise( (resolve, reject) => {
-        if ( thing === 'the earth' ) reject(Error(`Error - I didn't promise the earth`))
-        resolve(`you promised me ${thing} !`)
-    })
+  return new Promise((resolve, reject) => {
+    if (thing === 'the earth') reject(Error(`Error - I didn't promise the earth`))
+    resolve(`you promised me ${thing} !`)
+  })
 }
 
 /*
@@ -16,17 +16,15 @@ youPromised('the earth').then(
 */
 
 describe('Promises', () => {
-    test('resolved', () => {
-        expect.assertions(1)
-        //TODO - tried to use await here - got an error saying that await was a
-        // reserved word - google 'jest await reserved'
-        return expect(youPromised('flowers')).resolves.toBe('you promised me flowers !')
-    })
+  test('resolved', () => {
+    expect.assertions(1)
+    // TODO - tried to use await here - got an error saying that await was a
+    // reserved word - google 'jest await reserved'
+    return expect(youPromised('flowers')).resolves.toBe('you promised me flowers !')
+  })
 
-    test('rejected, failing with an error', () => {
-        expect.assertions(1)
-        return expect( youPromised('the earth') ).rejects.toThrow("Error - I didn't promise the earth")
-    })
-
-
+  test('rejected, failing with an error', () => {
+    expect.assertions(1)
+    return expect(youPromised('the earth')).rejects.toThrow("Error - I didn't promise the earth")
+  })
 })

@@ -1,5 +1,5 @@
-module.exports = teeny;
+module.exports = teeny
 
-function teeny(){
-    return (Math.random() * 6) + 13;
+function teeny () {
+  return (Math.random() * 6) + 13
 }

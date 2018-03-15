@@ -1,5 +1,5 @@
-function template(first, last, show, tickets){
-    return `Dear ${first} ${last}
+function template (first, last, show, tickets) {
+  return `Dear ${first} ${last}
 
     Thanks for buying tickets through ticket guru.
 
@@ -10,7 +10,7 @@ function template(first, last, show, tickets){
 }
 
 test('multiline template strings', () => {
-    let resultText = `Dear Bob Marley
+  let resultText = `Dear Bob Marley
 
     Thanks for buying tickets through ticket guru.
 
@@ -18,5 +18,5 @@ test('multiline template strings', () => {
 
     Ticket Guru
     `
-    expect(template('Bob', 'Marley', 'Lion King', 34)).toBe(resultText)
+  expect(template('Bob', 'Marley', 'Lion King', 34)).toBe(resultText)
 })

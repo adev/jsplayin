@@ -18,6 +18,6 @@ promise2 won't be set until doSomething AND the success/fail callback is returne
 */
 
 console.log(
-    'See my learning here: ' +
+  'See my learning here: ' +
     'mdn/javascript-guide/03-control-flow-and-error-handling/promises.test.js'
 )

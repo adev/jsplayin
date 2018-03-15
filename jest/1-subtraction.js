@@ -1,5 +1,5 @@
 module.exports = subtraction
 
-function subtraction(first, second){
-    return (first - second);
+function subtraction (first, second) {
+  return (first - second)
 }

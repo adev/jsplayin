@@ -26,7 +26,7 @@ const pureEducation = (person) => ({
 })
 
 describe('Pure / Impure education for Fred', () => {
-  beforeEach( () => {
+  beforeEach(() => {
     fred = {
       name: 'Fred Flint',
       canRead: false,

@@ -15,8 +15,8 @@ const objToArr = arr => {
 
 test('transform object to array of objects', () => {
   expect(objToArr(schools)).toEqual([
-    {name:'Yorktown', wins:10},
-    {name:'Washington & Lee', wins:3},
-    {name:'Wakefield', wins:5}
+    {name: 'Yorktown', wins: 10},
+    {name: 'Washington & Lee', wins: 3},
+    {name: 'Wakefield', wins: 5}
   ])
 })

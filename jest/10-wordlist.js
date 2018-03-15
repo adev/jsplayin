@@ -1,5 +1,5 @@
-module.exports = wordlist;
+module.exports = wordlist
 
-function wordlist(sentence){
-    return sentence.split(' ');
+function wordlist (sentence) {
+  return sentence.split(' ')
 }

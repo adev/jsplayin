@@ -1,5 +1,5 @@
-module.exports = hello;
+module.exports = hello
 
-function hello(name){
-    return 'Hello ' + name + '!';
+function hello (name) {
+  return 'Hello ' + name + '!'
 }

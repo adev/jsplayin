@@ -1,6 +1,6 @@
-module.exports = fullname;
+module.exports = fullname
 
-function fullname(name){
-    full = name.split(' ');
-    return {first: full[0], last: full[1]};
+function fullname (name) {
+  full = name.split(' ')
+  return {first: full[0], last: full[1]}
 }

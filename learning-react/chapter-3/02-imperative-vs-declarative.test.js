@@ -9,8 +9,8 @@ should happen.
 
 const imperativeFriendlyUrl = text => {
   let urlFriendly = ''
-  for ( var i = 0; i < text.length; i++){
-    if ( text[i] === ' '){
+  for (var i = 0; i < text.length; i++) {
+    if (text[i] === ' ') {
       urlFriendly += '-'
     } else {
       urlFriendly += text[i]
@@ -21,7 +21,7 @@ const imperativeFriendlyUrl = text => {
 
 const declarativeFriendlyUrl = text => text.replace(/ /g, '-')
 
-describe ( 'imperative-vs-declarative', () => {
+describe('imperative-vs-declarative', () => {
   let text = 'This is the string to make url friendly'
   let result = 'This-is-the-string-to-make-url-friendly'
   test('url-friendly imperative', () => {

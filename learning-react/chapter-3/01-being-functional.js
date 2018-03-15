@@ -3,8 +3,8 @@ You may have noticed that you can declare functions with the var keyword the sam
 way you can declare strings, numbers or any other variable
 */
 
-var log = function (message){
-    console.log(message)
+var log = function (message) {
+  console.log(message)
 }
 
 log('In javascript functions are variables')
@@ -22,8 +22,8 @@ Since functions are variables we can add them to objects
 */
 
 const obj = {
-    message: "They can be added to objects like variables",
-    log(message){ console.log(message)}
+  message: 'They can be added to objects like variables',
+  log (message) { console.log(message) }
 }
 
 obj.log(obj.message)
@@ -33,16 +33,14 @@ We can also add functions to arrays in Javascript
 */
 
 const messages = [
-    'They can be inserted into arrays',
-    message => console.log(message),
-    'like variables',
-    message => console.log(message)
+  'They can be inserted into arrays',
+  message => console.log(message),
+  'like variables',
+  message => console.log(message)
 ]
 
 messages[1](messages[0])
 messages[3](messages[2])
-
-
 
 /*
 FUNCTIONS THAT TAKE FUNCTIONS AS ARGUMENTS OR RETURN FUNCTIONS ARE KNOWN AS
@@ -55,12 +53,12 @@ const insideFn = logger => logger('They can be sent to other functions as argume
 const upperer = text => text.toUpperCase()
 
 insideFn(console.log)
-console.log( insideFn(upperer) )
+console.log(insideFn(upperer))
 
 /*
 They can also be returned from other functions, just like variables
 */
-//two arrows means that they are returning a function, in this case they are also
+// two arrows means that they are returning a function, in this case they are also
 // taking a function as an argument
 const createScream = callback => text => callback(text.toUpperCase() + '!!!')
 const createWhisper = callback => text => callback('shhhh...' + text.toLowerCase())
@@ -68,9 +66,9 @@ const createWhisper = callback => text => callback('shhhh...' + text.toLowerCase
 const logger = message => console.log(message)
 const repeater = message => message.repeat(2)
 
-const screamLog = createScream( logger )
-const whisperLog = createWhisper( logger )
-const whisperScream = createScream( whisperLog )
+const screamLog = createScream(logger)
+const whisperLog = createWhisper(logger)
+const whisperScream = createScream(whisperLog)
 const repeatWhisper = createWhisper(repeater)
 
 const consoleScream = createScream(console.log)
