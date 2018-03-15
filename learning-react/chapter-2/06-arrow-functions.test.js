@@ -62,13 +62,13 @@ describe('arrow functions',() => {
         expect(multilord('Bob', 'Breadalbane')).toBe(lordbob)
     })
     test('traditional with multiline function body & error',()=>{
-        expect(multilord('Bob')).toThrowError('Missing land when calling multilord function')
+        expect( () => { multilord('Bob') }).toThrowError('Missing land when calling multilord function')
     })
     test('arrow function with multiline function body',()=>{
         expect(arrowMultilord('Bob', 'Breadalbane')).toBe(lordbob)
     })
     test('arrow Function with multiline function body & error',()=>{
-        expect(arrowMultilord('Bob')).toThrowError('Missing land when calling multilord function')
+        expect( () => { arrowMultilord('Bob') }).toThrowError('Missing land when calling multilord function')
     })
 
 })
