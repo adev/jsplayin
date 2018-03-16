@@ -19,16 +19,10 @@ const objectifySchools = schools => schools.map(name => ({ name }))
 const editSchool = (schools, oldSchool, newSchool) => {
   return schools.map (school => (
     school.name === oldSchool
-      ? ({ ...school, newSchool })
+      ? ({ name: newSchool })
       : school
   ))
 }
-
-let schoolObjects = objectifySchools(schools)
-let updatedSchools = editSchool(schoolObjects, 'Washington & Lee', 'Dundee')
-
-console.log (updatedSchools)
-/*
 
 describe('data transformations ', () => {
   test('join', () => {
@@ -74,31 +68,16 @@ describe('data transformations ', () => {
   // map can be used to return objects, arrays, values or other functions
   // this is an example of returning an object for every school
   test('transforming an array of values to an array of objects', () => {
-    let schoolObjects = objectifySchools(schools)
-    schoolObjects.forEach(
-      obj => expect(obj).toEqual({name: obj.name})
-    )
-    for (let school in schoolObjects) {
-      expect(schoolObjects[ school ].name).toBe(schools[ school ])
-    }
+    expect(objectifySchools(schools)).toEqual([
+        {name:'Yorktown'}, {name:'Washington & Lee'}, {name:'Wakefield'}
+    ])
   })
 
   // using map to transform one element of the array
   test('using map to change one value of an array of objects', () => {
     let schoolObjects = objectifySchools(schools)
-    let updatedSchools = editSchool(schoolObjects, 'Washington & Lee', 'Dundee')
-
-    expect(updatedSchools).toBeInstanceOf(Array)
-    expect(updatedSchools.length).toBe(schoolObjects.length)
-    expect(updatedSchools).not.toEqual(schoolObjects)
-
-    for (let school in schoolObjects) {
-      (
-        school === 1
-          ? expect(updatedSchools[ school ]).not.toEqual(schoolObjects[ school ])
-          : expect(updatedSchools[ school ]).toEqual(schoolObjects[ school ])
-      )
-    }
+    expect(editSchool(schoolObjects, 'Washington & Lee', 'Dundee')).toEqual([
+        {name:'Yorktown'}, {name:'Dundee'}, {name:'Wakefield'}
+    ])
   })
 })
-*/
