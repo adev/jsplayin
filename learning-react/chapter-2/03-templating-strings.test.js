@@ -9,7 +9,7 @@ function myConcat (style, tthis, that, other) {
 }
 
 describe('templating strings', () => {
-  resultText = 'join this, that and the other'
+  let resultText = 'join this, that and the other'
   test('using traditional concatenation', () => {
     expect(myConcat(0, 'this', 'that', 'the other')).toBe(resultText)
   })

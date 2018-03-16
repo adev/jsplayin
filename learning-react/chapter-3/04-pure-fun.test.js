@@ -40,7 +40,7 @@ describe('Pure / Impure education for Fred', () => {
     expect(fred.canRead).toBe(true)
     expect(fred.canWrite).toBe(true)
     expect(fred.catchPhrase).toBe('Yaba-daba-doo!')
-    expect(cleverFred == fred).toBeTruthy()
+    expect(cleverFred === fred).toBeTruthy()
   })
 
   test('pure education', () => {
@@ -51,6 +51,6 @@ describe('Pure / Impure education for Fred', () => {
     expect(cleverFred.canRead).toBe(true)
     expect(cleverFred.canWrite).toBe(true)
     expect(cleverFred.catchPhrase).toBe('Yaba-daba-doo!')
-    expect(cleverFred == fred).toBeFalsy()
+    expect(cleverFred === fred).toBeFalsy()
   })
 })

@@ -17,10 +17,10 @@ const immuLawnRater = (colour, rating) => {
 const immuLawnRaterES6 = (colour, rating) => ({ ...colour, rating })
 
 describe('lawn-colour rater', () => {
-  let colour_lawn = {}
+  let colourLawn = {}
 
   beforeEach(() => {
-    colour_lawn = {
+    colourLawn = {
       title: 'lawn',
       colour: '#00FF00',
       rating: 4
@@ -29,22 +29,22 @@ describe('lawn-colour rater', () => {
 
   test('mutable lawn rating', () => {
     // passes in a colour object and returns the  object, updated
-    mutaLawnRater(colour_lawn, 5)
-    expect(colour_lawn.rating).toBe(5)
+    mutaLawnRater(colourLawn, 5)
+    expect(colourLawn.rating).toBe(5)
   })
 
   test('immutable lawn rating', () => {
     // passes in a colour object and returns a copy of the object, updated
-    let colour_lawn_new = immuLawnRater(colour_lawn, 5)
-    expect(colour_lawn.rating).toBe(4)
-    expect(colour_lawn_new.rating).toBe(5)
+    let colourLawnNew = immuLawnRater(colourLawn, 5)
+    expect(colourLawn.rating).toBe(4)
+    expect(colourLawnNew.rating).toBe(5)
   })
 
   test('immutable lawn rating - using spread operator', () => {
     // passes in a colour object and returns a copy of the object, updated
-    let colour_lawn_new = immuLawnRaterES6(colour_lawn, 5)
-    expect(colour_lawn.rating).toBe(4)
-    expect(colour_lawn_new.rating).toBe(5)
+    let colourLawnNew = immuLawnRaterES6(colourLawn, 5)
+    expect(colourLawn.rating).toBe(4)
+    expect(colourLawnNew.rating).toBe(5)
   })
 })
 
@@ -55,7 +55,7 @@ describe('adding to a lawn-colour list', () => {
   let list = []
 
   beforeEach(() => {
-    list = [ {title: 'Rad Red'}, {title: 'Lawn'}, {title: 'Party Pink'}]
+    list = [ {title: 'Rad Red'}, {title: 'Lawn'}, {title: 'Party Pink'} ]
   })
 
   test('mutable colour adding', () => {

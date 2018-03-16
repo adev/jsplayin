@@ -23,5 +23,8 @@
     "jest": "^22.4.2",
     "regenerator-runtime": "^0.11.1",
     "standard": "^11.0.1"
+  },
+  "standard":{
+      "env":["jest"]
   }
 }

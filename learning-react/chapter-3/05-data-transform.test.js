@@ -8,7 +8,7 @@ functional javascript: Array.map and Array.reduce.
 
 const schools = [ 'Yorktown', 'Washington & Lee', 'Wakefield' ]
 
-const immuPop = schools => schools.filter(school => school != schools[schools.length - 1])
+const immuPop = schools => schools.filter(school => school !== schools[schools.length - 1])
 
 const immuPop2 = schools => [...schools].slice(0, schools.length - 1)
 
@@ -17,12 +17,18 @@ const makeHigh = schools => schools.map(school => `${school} High School`)
 const objectifySchools = schools => schools.map(name => ({ name }))
 
 const editSchool = (schools, oldSchool, newSchool) => {
-  return schools.map(school => (
+  return schools.map (school => (
     school.name === oldSchool
       ? ({ ...school, newSchool })
       : school
   ))
 }
+
+let schoolObjects = objectifySchools(schools)
+let updatedSchools = editSchool(schoolObjects, 'Washington & Lee', 'Dundee')
+
+console.log (updatedSchools)
+/*
 
 describe('data transformations ', () => {
   test('join', () => {
@@ -81,15 +87,18 @@ describe('data transformations ', () => {
   test('using map to change one value of an array of objects', () => {
     let schoolObjects = objectifySchools(schools)
     let updatedSchools = editSchool(schoolObjects, 'Washington & Lee', 'Dundee')
+
     expect(updatedSchools).toBeInstanceOf(Array)
     expect(updatedSchools.length).toBe(schoolObjects.length)
     expect(updatedSchools).not.toEqual(schoolObjects)
+
     for (let school in schoolObjects) {
       (
-        school == 1
+        school === 1
           ? expect(updatedSchools[ school ]).not.toEqual(schoolObjects[ school ])
           : expect(updatedSchools[ school ]).toEqual(schoolObjects[ school ])
       )
     }
   })
 })
+*/

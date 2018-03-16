@@ -13,10 +13,10 @@ const getHighest = arrNumbers => arrNumbers.reduce(
 )
 
 const colours = [
-  { id: '-xekare', title: 'red red', rating: '3'},
-  { id: '-jbwsof', title: 'big blue', rating: '2'},
-  { id: '-prigbj', title: 'grizzly grey', rating: '5'},
-  { id: '-ryhbhs1', title: 'banana', rating: '1'}
+  { id: '-xekare', title: 'red red', rating: '3' },
+  { id: '-jbwsof', title: 'big blue', rating: '2' },
+  { id: '-prigbj', title: 'grizzly grey', rating: '5' },
+  { id: '-ryhbhs1', title: 'banana', rating: '1' }
 ]
 
 const hashArray = array => array.reduce(
