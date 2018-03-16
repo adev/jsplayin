@@ -17,12 +17,13 @@ Output:"edoC evoL I"
 */
 
 const firstReverse = require('./1-first-reverse')
-
-test('FirstReverse(str)', () => {
-  const coderbyte = 'coderbyte'
-  const loveCode = 'I Love Code'
-  expect(firstReverse(coderbyte)).toBe('etybredoc')
-  expect(coderbyte).toBe('coderbyte')
-  expect(firstReverse(loveCode)).toBe('edoC evoL I')
-  expect(loveCode).toBe('I Love Code')
+describe('coderbyte', () => {
+  test('FirstReverse(str)', () => {
+    const coderbyte = 'coderbyte'
+    const loveCode = 'I Love Code'
+    expect(firstReverse(coderbyte)).toBe('etybredoc')
+    expect(coderbyte).toBe('coderbyte')
+    expect(firstReverse(loveCode)).toBe('edoC evoL I')
+    expect(loveCode).toBe('I Love Code')
+  })
 })
