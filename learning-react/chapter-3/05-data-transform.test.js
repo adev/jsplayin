@@ -17,7 +17,7 @@ const makeHigh = schools => schools.map(school => `${school} High School`)
 const objectifySchools = schools => schools.map(name => ({ name }))
 
 const editSchool = (schools, oldSchool, newSchool) => {
-  return schools.map (school => (
+  return schools.map(school => (
     school.name === oldSchool
       ? ({ name: newSchool })
       : school
@@ -69,7 +69,7 @@ describe('data transformations ', () => {
   // this is an example of returning an object for every school
   test('transforming an array of values to an array of objects', () => {
     expect(objectifySchools(schools)).toEqual([
-        {name:'Yorktown'}, {name:'Washington & Lee'}, {name:'Wakefield'}
+      {name: 'Yorktown'}, {name: 'Washington & Lee'}, {name: 'Wakefield'}
     ])
   })
 
@@ -77,7 +77,7 @@ describe('data transformations ', () => {
   test('using map to change one value of an array of objects', () => {
     let schoolObjects = objectifySchools(schools)
     expect(editSchool(schoolObjects, 'Washington & Lee', 'Dundee')).toEqual([
-        {name:'Yorktown'}, {name:'Dundee'}, {name:'Wakefield'}
+      {name: 'Yorktown'}, {name: 'Dundee'}, {name: 'Wakefield'}
     ])
   })
 })
