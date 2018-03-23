@@ -19,9 +19,9 @@
 const simpleSymbols = require('./07-simple-symbols')
 
 test('Coderbyte: Simple Symbols', () => {
-  //matches the pattern for both letters
+  // matches the pattern for both letters
   expect(simpleSymbols('+d+=3=+s+')).toBe(true)
-  //matches the pattern for only one letter
+  // matches the pattern for only one letter
   expect(simpleSymbols('f++d+')).toBe(false)
   // no letters, so the string passes
   expect(simpleSymbols('=+=+.+===')).toBe(true)

@@ -1,16 +1,13 @@
-const overlapRegex = require('./adv-overlap-regex')
-
-const simpleSymbols = str =>{
-  let matches = overlapRegex( str, /\+[a-z]\+/gi )
-  let letters = str.match(/[a-z]/gi)
-
-  return (letters)
-    ? (matches > 0)
-      ? (matches === letters.length)
-        ? true
-        : false
-      : false // letters and no matches for format = fail
-    : true // no letters, so letter format passes
-}
+const simpleSymbols = str => [...str].reduce(
+  (passes, currentChar, i) =>
+    (currentChar.match(/[a-z]/i))
+      ? (str.slice(i - 1, i + 2).match(/\+[a-z]\+/i))
+        ? passes !== false : false
+      : passes
+  , true)
 
 module.exports = simpleSymbols
+
+// console.log(
+//   simpleSymbols2('+d+=3=+s+')
+// )
