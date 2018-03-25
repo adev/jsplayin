@@ -15,7 +15,8 @@
 // Input:8
 // Output:40320
 
-const firstFactorial = require('./2-first-factorial')
+const firstFactorial = require('./02-first-factorial')
+
 describe('coderbyte', () => {
   test('first factorial', () => {
     expect(firstFactorial(4)).toBe(24)

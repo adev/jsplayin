@@ -16,7 +16,8 @@ Input:"I Love Code"
 Output:"edoC evoL I"
 */
 
-const firstReverse = require('./1-first-reverse')
+const firstReverse = require('./01-first-reverse')
+
 describe('coderbyte', () => {
   test('FirstReverse(str)', () => {
     const coderbyte = 'coderbyte'
