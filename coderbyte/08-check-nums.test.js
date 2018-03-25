@@ -11,3 +11,11 @@
 //
 // Input:67 & num2 = 67
 // Output:"-1"
+
+const checkNums = require('./08-check-nums')
+
+test('Coderbyte checkNums ', () => {
+  expect(checkNums(3, 122)).toBe('true')
+  expect(checkNums(122, 3)).toBe('false')
+  expect(checkNums(122, 122)).toBe('-1')
+})
