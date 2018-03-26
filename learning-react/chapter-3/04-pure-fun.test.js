@@ -8,6 +8,14 @@ They do
  - NOT set global variables
  - NOT change anything about application state
  - NOT change or mutate any of its arguements
+
+
+Functional programming:
+
+1. Keep data immutable.
+2. Keep functions pure — accept at least one argument, return data or another function.
+3. Use recursion over looping (wherever possible).
+
 */
 
 var fred = {}
