@@ -11,3 +11,10 @@
 //
 // Input:"hooplah"
 // Output:"ahhloop"
+
+const alphaSoup = require('./10-alphabet-soup')
+
+test('coderbyte - alphabet soup', () => {
+  expect(alphaSoup('coderbyte')).toBe('bcdeeorty')
+  expect(alphaSoup('hooplah')).toBe('ahhloop')
+})
