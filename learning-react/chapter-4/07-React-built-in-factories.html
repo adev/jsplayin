@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> React Built In Factories </title>
+</head>
+<body>
+  <!-- Target Container -->
+  <div id="react-container"></div>
+
+  <!-- React Library and ReactDOM -->
+  <script src="https://unpkg.com/react@15.4.2/dist/react.js"></script>
+  <script src="https://unpkg.com/react-dom@15.4.2/dist/react-dom.js"></script>
+
+  <script>
+
+    // Factories
+    // e.g. React.DOM.h1(null, 'Baked Salmon')
+    // instead of React.createElement(....)
+
+    const ingredientsData = [
+      '1 lb salmon',
+      '1 cup pine nuts',
+      '2 cups butter lettuce',
+      '1 yellow squash',
+      '1/2 cup olive oil',
+      '3 cloves of garlic'
+    ]
+
+    const IngredientsList = React.DOM.ul(
+      { className: 'ingredients' },
+      ingredientsData.map( (ingredient, key) =>
+        React.DOM.li( { key }, ingredient )
+      )
+    )
+
+    ReactDOM.render(
+      IngredientsList,
+      document.getElementById('react-container')
+    )
+
+  </script>
+
+</body>
+</html>

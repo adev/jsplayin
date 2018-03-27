@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> React Built In Factories </title>
+</head>
+<body>
+  <!-- Target Container -->
+  <div id="react-container"></div>
+
+  <!-- React Library and ReactDOM -->
+  <script src="https://unpkg.com/react@15.4.2/dist/react.js"></script>
+  <script src="https://unpkg.com/react-dom@15.4.2/dist/react-dom.js"></script>
+
+  <script>
+
+    // Factories
+    // if you would like to simplify your code by calling Components
+    // as functions, you need to explicitly create a factory
+
+    const list = [
+      '1 lb salmon',
+      '1 cup pine nuts',
+      '2 cups butter lettuce',
+      '1 yellow squash',
+      '1/2 cup olive oil',
+      '3 cloves of garlic'
+    ]
+
+    const IngredientsList = ({list}) =>
+      React.createElement('ul', null,
+        list.map((ingredient, i) =>
+          React.createElement('li', { key: i }, ingredient)
+        )
+      )
+
+    // Create the factory
+    const Ingredients = React.createFactory(IngredientsList)
+
+    ReactDOM.render(
+      Ingredients({list}),
+      document.getElementById('react-container')
+    )
+
+  </script>
+
+</body>
+</html>
