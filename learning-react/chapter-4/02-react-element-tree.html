@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Pure React Samples </title>
+</head>
+<body>
+  <!-- Target Container -->
+  <div id="react-container"></div>
+
+  <!-- React Library and ReactDOM -->
+  <script src="https://unpkg.com/react@15.4.2/dist/react.js"></script>
+  <script src="https://unpkg.com/react-dom@15.4.2/dist/react-dom.js"></script>
+
+  <script>
+
+    // Pure React and Javascript Code
+    var salmonRecipe =
+      React.createElement('section', {id: 'baked-salmon'},
+        React.createElement('h1' , null, 'Baked Salmon'),
+        React.createElement('ul', {'className':'ingredients'},
+          React.createElement('li', null, '1 lb salmon'),
+          React.createElement('li', null, '1 cup pine nuts'),
+          React.createElement('li', null, '2 cups butter lettuce'),
+          React.createElement('li', null, '1 yellow squash'),
+          React.createElement('li', null, '1/2 cup olive oil'),
+          React.createElement('li', null, '3 cloves of garlic')
+        ),
+        React.createElement('ul', {'className':'cooking instructions'},
+          React.createElement('p', null, 'pre-heat the oven to 350 degrees'),
+          React.createElement('p', null, 'spread the olive oil around a glass baking dish'),
+          React.createElement('p', null, 'add the salmon, garlic and pine...'),
+          React.createElement('p', null, 'bake for 15 minutes'),
+          React.createElement('p', null, 'add the yellow squash and put ...'),
+          React.createElement('p', null, 'remove from the oven and let cool for 15 ...')
+        )
+      )
+
+    ReactDOM.render(salmonRecipe, document.getElementById('react-container'))
+
+  </script>
+
+</body>
+</html>
