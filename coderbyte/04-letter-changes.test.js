@@ -20,4 +20,5 @@ const letterChanges = require('./04-letter-changes')
 test('coderbyte letter changes', () => {
   expect(letterChanges('hello*3')).toBe('Ifmmp*3')
   expect(letterChanges('fun times!')).toBe('gvO Ujnft!')
+  expect(letterChanges('fun times!z')).toBe('gvO Ujnft!A')
 })
