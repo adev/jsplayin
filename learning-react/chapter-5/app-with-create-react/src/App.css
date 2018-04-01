@@ -26,3 +26,20 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+article>header {
+  font-size: 1.2em
+}
+
+div.RecipesListing{
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+div.recipes>section{
+  border: solid 2px;
+  padding: 1em;
+  background-color: white;
+  margin-bottom: 1em;
+  text-align:left;
+}
